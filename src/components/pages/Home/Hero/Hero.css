@@ -1,0 +1,170 @@
+.hero {
+    width: 100%;
+    min-height: 50vh;
+    position: relative;
+    padding: 120px 0 60px 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+.hero h2 {
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+@media (max-width: 575px) {
+    .hero h2 {
+        font-size: 30px;
+    }
+}
+
+.hero p {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.hero form {
+    background-color: #1f1f1f;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 100%;
+    box-shadow: 0 0 0 0.4px hsla(0, 0%, 100%, 0.14);
+}
+
+.hero form .form-control {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    margin-right: 10px;
+    border: none !important;
+    background: none !important;
+}
+
+.hero form .form-control::placeholder {
+    color: #fff;
+}
+
+.hero form .form-control:hover,
+.hero form .form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.hero form .btn-primary {
+    color: #1f1f1f;
+    background-color: #cccccc;
+    flex-shrink: 0;
+    border: none;
+    padding: 0 25px;
+}
+
+.hero form .btn-primary:hover {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+.hero .stats-item {
+    padding: 30px;
+    width: 100%;
+}
+
+.hero .stats-item span {
+    font-size: 32px;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.hero .stats-item span:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 3px;
+    background: var(--accent-color);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.hero .stats-item p {
+    padding: 0;
+    margin: 0;
+    font-family: var(--heading-font);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+# Featured Services Section
+--------------------------------------------------------------*/
+.featured-services .service-item {
+    position: relative;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.featured-services .service-item .icon {
+    margin-right: 20px;
+}
+
+.featured-services .service-item .icon i {
+    color: var(--accent-color);
+    font-size: 40px;
+    transition: 0.3s;
+}
+
+.featured-services .service-item:hover .icon i {
+    color: var(--accent-color);
+}
+
+.featured-services .service-item .title {
+    color: var(--heading-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.featured-services .service-item .description {
+    font-size: 15px;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    margin-bottom: 10px;
+}
+
+.featured-services .service-item .readmore {
+    display: flex;
+    align-items: center;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    transition: 0.3s;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.featured-services .service-item .readmore i {
+    margin-left: 8px;
+}
+
+.featured-services .service-item:hover .title,
+.featured-services .service-item:hover .readmore,
+.featured-services .service-item:hover .icon i {
+    color: var(--accent-color);
+}
+
+.hero{
+    margin-top: 40px;
+}
+
+.cn{
+    row-gap: 3rem;
+}

@@ -1,0 +1,56 @@
+.featured-services .service-item {
+    position: relative;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.featured-services .service-item .icon {
+    margin-right: 20px;
+}
+
+.featured-services .service-item .icon i {
+    color: var(--accent-color);
+    font-size: 40px;
+    transition: 0.3s;
+}
+
+.featured-services .service-item:hover .icon i {
+    color: var(--accent-color);
+}
+
+.featured-services .service-item .title {
+    color: var(--heading-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.featured-services .service-item .description {
+    font-size: 15px;
+    color: #7f7f7f;
+    margin-bottom: 10px;
+}
+
+.featured-services .service-item .readmore {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    max-width: max-content;
+    color: white;
+    transition: 0.3s;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: var(--b-radius);
+    border: 1px solid hsla(0, 0%, 100%, 0.14);
+}
+
+.featured-services .service-item .readmore i {
+    margin-left: 8px;
+}
+
+.featured-services .service-item:hover .title,
+.featured-services .service-item:hover .readmore,
+.featured-services .service-item:hover .icon i {
+    color: var(--accent-color);
+}

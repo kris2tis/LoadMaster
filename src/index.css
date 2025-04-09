@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* Fonts */
+:root {
+  /* ✅ فونت‌ها */
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Poppins", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+
+  /* ✅ رنگ‌های اصلی */
+  --background-color: #000000; /* رنگ پس‌زمینه کلی */
+  --default-color: #7f7f7f; /* رنگ متن اصلی */
+  --heading-color: #ffffff; /* رنگ تیترها */
+  --accent-color: #CCCCCC; /* رنگ برند، دکمه‌ها، لینک‌ها */
+  --surface-color: #212529; /* پس‌زمینه برای کارت‌ها و باکس‌ها */
+  --contrast-color: #212529; /* رنگ متضاد برای خوانایی بهتر */
+
+  /* ✅ رنگ‌های منو */
+  --nav-color: #a1a1a1; /* رنگ لینک‌های منو */
+  --nav-hover-color: #ffffff; /* رنگ لینک‌های منو هنگام هاور */
+  --nav-mobile-background-color: #c02a2a; /* رنگ پس‌زمینه منوی موبایل */
+  --nav-dropdown-background-color: #030303; /* رنگ پس‌زمینه آیتم‌های منوی کشویی */
+  --nav-dropdown-color: #a1a1a1; /* رنگ متن در منوی کشویی */
+  --nav-dropdown-hover-color: #ffffff; /* رنگ لینک‌های منوی کشویی هنگام هاور */ --radius: 0.625rem; --background: oklch(1 0 0); --foreground: oklch(0.13 0.028 261.692); --card: oklch(1 0 0); --card-foreground: oklch(0.13 0.028 261.692); --popover: oklch(1 0 0); --popover-foreground: oklch(0.13 0.028 261.692); --primary: oklch(0.21 0.034 264.665); --primary-foreground: oklch(0.985 0.002 247.839); --secondary: oklch(0.967 0.003 264.542); --secondary-foreground: oklch(0.21 0.034 264.665); --muted: oklch(0.967 0.003 264.542); --muted-foreground: oklch(0.551 0.027 264.364); --accent: oklch(0.967 0.003 264.542); --accent-foreground: oklch(0.21 0.034 264.665); --destructive: oklch(0.577 0.245 27.325); --border: oklch(0.928 0.006 264.531); --input: oklch(0.928 0.006 264.531); --ring: oklch(0.707 0.022 261.325); --chart-1: oklch(0.646 0.222 41.116); --chart-2: oklch(0.6 0.118 184.704); --chart-3: oklch(0.398 0.07 227.392); --chart-4: oklch(0.828 0.189 84.429); --chart-5: oklch(0.769 0.188 70.08); --sidebar: oklch(0.985 0.002 247.839); --sidebar-foreground: oklch(0.13 0.028 261.692); --sidebar-primary: oklch(0.21 0.034 264.665); --sidebar-primary-foreground: oklch(0.985 0.002 247.839); --sidebar-accent: oklch(0.967 0.003 264.542); --sidebar-accent-foreground: oklch(0.21 0.034 264.665); --sidebar-border: oklch(0.928 0.006 264.531); --sidebar-ring: oklch(0.707 0.022 261.325);
+
+  --b-radius:12px;
+}
+
+.light-background {
+  --background-color: #f7f9fc;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #0e1d34;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #19335c;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none !important;
+  transition: 0.3s !important;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+.pulsating-play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(var(--accent-color) 50%, color-mix(in srgb, var(--accent-color), transparent 75%) 52%);
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.pulsating-play-btn:before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  animation-delay: 0s;
+  animation: pulsate-play-btn 2s;
+  animation-direction: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid color-mix(in srgb, var(--accent-color), transparent 30%);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+
+.pulsating-play-btn:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.pulsating-play-btn:hover:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 200;
+  animation: none;
+  border-radius: 0;
+}
+
+.pulsating-play-btn:hover:after {
+  border-left: 15px solid var(--accent-color);
+  transform: scale(20);
+}
+
+.img-fluid{
+    border-radius: var(--b-radius);
+}
+
+/*--------------------------------------------------------------
+# Global Page Titles & Breadcrumbs
+--------------------------------------------------------------*/
+
+.page-title {
+  color: var(--default-color);
+  background-color: #0A0A0A;
+  padding: 160px 0 80px 0;
+  text-align: center;
+  position: relative;
+}
+
+.page-title h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.page-title .breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.page-title .breadcrumbs ol a {
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+.page-title .breadcrumbs ol a:hover {
+  color: var(--contrast-color);
+}
+
+.page-title .breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.page-title .breadcrumbs ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  padding: 60px 0;
+  scroll-margin-top: 100px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    scroll-margin-top: 66px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding: 30px 0;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.section-title span {
+  position: absolute;
+  top: 4px;
+  color: color-mix(in srgb, var(--heading-color), transparent 95%);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 52px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.section-title p {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 575px) {
+  .section-title h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .section-title span {
+    font-size: 38px;
+  }
+}

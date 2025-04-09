@@ -1,0 +1,55 @@
+.team .member {
+    background-color: #0a0a0a;
+    border: 1px solid hsla(0, 0%, 100%, 0.14);
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: var(--b-radius);
+    overflow: hidden;
+}
+
+.team .member img {
+    margin: -1px -1px 30px -1px;
+    border-radius: 0px;
+}
+
+.team .member .member-content {
+    padding: 0 20px 30px 20px;
+}
+
+.team .member h4 {
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+
+.team .member span {
+    font-style: italic;
+    display: block;
+    font-size: 13px;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.team .member p {
+    padding-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.team .member .social {
+    margin-top: 15px;
+}
+
+.team .member .social a {
+    color: color-mix(in srgb, var(--default-color), transparent 60%);
+    transition: 0.3s;
+}
+
+.team .member .social a:hover {
+    color: var(--accent-color);
+}
+
+.team .member .social i {
+    font-size: 18px;
+    margin: 0 2px;
+}
