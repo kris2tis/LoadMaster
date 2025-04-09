@@ -37,12 +37,6 @@ I am currently a **junior front-end developer**, exploring modern frameworks and
 
 ---
 
-## 📸 Screenshots (Optional)
-
-You can add some screenshots or a preview GIF here if you'd like!
-
----
-
 ## 💡 Future Plans
 
 - Adding form validation and API integration  
