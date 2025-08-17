@@ -1,16 +1,11 @@
 # 🚛 LoadMaster | Logistics SPA Website
 
-Welcome to **LoadMaster**, a responsive and modern logistics Single Page Application (SPA) built using **React**.  
-This project is designed with clean UI, smooth animations, and real-world components to simulate a professional cargo and freight company site. 🚚
+LoadMaster, a responsive and modern single page website (SPA) built using **React**, 
+This project is designed with a clean user interface, smooth animations to simulate the static freight company website. 🚚
 
 ---
 
-## ⚙️ Technologies & Dependencies
-
-This project is built with the **React** framework, taking advantage of its component-based architecture and virtual DOM for fast and smooth user interactions.
-
-### 🔌 Major Dependencies:
-
+## Technologies
 
  **react**            
  **react-dom**        
@@ -36,13 +31,3 @@ I am currently a **junior front-end developer**, exploring modern frameworks and
 
 ---
 
-## 💡 Future Plans
-
-- Adding form validation and API integration  
-- Improving accessibility (a11y)  
-- Better mobile optimization  
-- Full CMS or backend integration
-
----
-
-> **Made with ❤️ by a curious learner in the world of front-end development.**
