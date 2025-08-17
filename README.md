@@ -11,20 +11,19 @@ This project is built with the **React** framework, taking advantage of its comp
 
 ### 🔌 Major Dependencies:
 
-| Package              | Description |
-|----------------------|-------------|
-| **react**            | Core framework for building UI components |
-| **react-dom**        | DOM rendering support for React |
-| **react-router-dom** | SPA routing (client-side navigation) |
-| **react-bootstrap**  | Bootstrap components built for React |
-| **bootstrap**        | CSS framework for responsive design |
-| **bootstrap-icons**  | Icon set for Bootstrap projects |
-| **tailwindcss**      | Utility-first CSS framework for custom styling |
-| **swiper**           | Modern slider library for carousels and swipes |
-| **aos**              | Animate On Scroll – smooth animation library |
-| **glightbox**        | Responsive lightbox gallery |
-| **purecounterjs**    | Lightweight animated counters |
-| **@fortawesome/fontawesome-free** | Popular icon library |
+
+ **react**            
+ **react-dom**        
+ **react-router-dom** 
+ **react-bootstrap** 
+ **bootstrap**        
+ **bootstrap-icons**  
+ **tailwindcss**      
+ **swiper**          
+ **aos**              
+ **glightbox**        
+ **purecounterjs**   
+ **@fortawesome/fontawesome-free** 
 
 All dependencies are selected for providing a mix of customizability, interactivity, and responsiveness — ideal for building dynamic modern websites.
 
